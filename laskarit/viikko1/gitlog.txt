@@ -1,0 +1,115 @@
+commit 451f2980526bc0c72ece25ae8ca5c4fa09fe087b
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 13:05:31 2018 +0200
+
+    did stuff
+
+ tiedostoja/file1.txt  | 0
+ tiedostoja/file2.txt  | 0
+ tiedostoja/file22.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ed53474f7ddd90226f254960f454377e48265983
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 13:01:18 2018 +0200
+
+    added tiedostoja
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 176a1416b849fb12d43acde0488f73f7bd66a09b
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:51:59 2018 +0200
+
+    t3.txt and tmuutettu.txt modified contents
+
+ t3.txt        |  4 +++-
+ tmuutettu.txt | 18 ++----------------
+ 2 files changed, 5 insertions(+), 17 deletions(-)
+
+commit b9bc9ddc58d2e95d3f8d3ecee934a88414e8a89a
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:48:41 2018 +0200
+
+    changed t.txt to tmuutettu.txt
+
+ t.txt         | 50 --------------------------------------------------
+ tmuutettu.txt | 50 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 50 insertions(+), 50 deletions(-)
+
+commit 568cf079aa7f0ef2dcead7add78196841b1dc0d1
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:31:11 2018 +0200
+
+    t2.txt removed
+
+ t2.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit c645942d1dd7dadfa58093b17890185d2765f9f3
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:29:48 2018 +0200
+
+    t.txt removed some text and added some other text
+
+ t.txt | 232 +-----------------------------------------------------------------
+ 1 file changed, 1 insertion(+), 231 deletions(-)
+
+commit 468e6b32f182a42075dca319b9b9da82b926a7ee
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:28:03 2018 +0200
+
+    t.txt added text
+
+ t.txt | 279 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 279 insertions(+)
+
+commit 10ddaf2badfad85d32a6fa5d7998864e39ff6c79
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:20:51 2018 +0200
+
+    lisätty hakemisto ja ohjelma
+
+ stuff/derp.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 72837e03fa15670add9b40dcd580fc3d00ec12cc
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:18:44 2018 +0200
+
+    t2.txt ja t3.txt muutettu
+
+ t2.txt | 1 +
+ t3.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 613a5b81e069835bee03cd4bed9094b1cf01cc75
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:17:55 2018 +0200
+
+    t3.txt lisätty
+
+ t3.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 2289857406e1d7829f740ff1df69bc66dbe3f27b
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:11:15 2018 +0200
+
+    muutos ja lisäys
+
+ t.txt  | 1 +
+ t2.txt | 0
+ 2 files changed, 1 insertion(+)
+
+commit 122411533eb5aeb50fae23d6399121e62df868f5
+Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
+Date:   Fri Mar 16 12:07:48 2018 +0200
+
+    t.txt luotu
+
+ t.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
