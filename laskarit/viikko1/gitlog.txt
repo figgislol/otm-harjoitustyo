@@ -1,3 +1,5 @@
+epäsynkroonitesti
+
 commit 451f2980526bc0c72ece25ae8ca5c4fa09fe087b
 Author: Patrik Mihelson-Adamson <patrikmihelson@gmail.com>
 Date:   Fri Mar 16 13:05:31 2018 +0200
