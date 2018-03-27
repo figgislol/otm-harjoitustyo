@@ -11,3 +11,4 @@ epäsynkroonitesti
 
 ## Dokumentointi
 [Vaatimusmäärittely](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
+[Työaikakirjanpito](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/tunnit.md)
