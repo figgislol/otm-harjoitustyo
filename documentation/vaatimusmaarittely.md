@@ -1,9 +1,9 @@
-## HelloFolio, a portfolio manager for cryptoassets
+# HelloFolio, a portfolio manager for cryptoassets
 
 HelloFolio will be used to manage a portfolio of wanted cryptoassets, to display their price at the current moment, and calculate a total value of the user's 
 holdings.
 
-# Basic functionalities
+## Basic functionalities
 * Each user can create their own username/password combination
 * Users can log in to the system if needed
 * The application can be used without logging in, a basic view is shown
