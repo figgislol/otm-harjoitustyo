@@ -19,7 +19,7 @@ public class UIHelloFolio
                 wantToLogin = true;
                 break;
             }
-            else if(wantToLoginStr.equals("exit"))
+            else if(wantToLoginStr.equals("exit") || wantToLoginStr.equals("quit"))
             {
                 System.exit(0);
             }

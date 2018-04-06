@@ -33,6 +33,7 @@ public class OSHelloFolio
         }
     }
 
+    //TODO handle wrong logins
     public boolean promptLogin() //getWantToLogin() -> promptLogin() in OS, return true on good login
     {
         boolean correctPassword = false;
@@ -49,10 +50,14 @@ public class OSHelloFolio
     public boolean createUser() //return true upon creation success
     {
         reader = new Scanner(System.in);
-        while(true) //gets stuck in while-loop if username creation keeps failing
+        while(true)
         {
-            System.out.print("Username: ");
+            System.out.print("Username (exit to exit): ");
             username = reader.nextLine();
+            if(username.equals("exit"))
+            {
+                System.exit(0); //easy way out now, need to implement a way to go back to previous "screen"
+            }
             if(users.containsKey(username))
             {
                 System.out.println("Username already exists!");

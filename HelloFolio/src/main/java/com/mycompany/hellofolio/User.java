@@ -6,13 +6,17 @@ public class User
     String name;
     Portfolio pf;
     Scanner reader;
+    boolean basic = false;
     public User(String name)
     {
         reader = new Scanner(System.in);
         this.name = name;
+        if(this.name.equals("basic"))
+            basic = true;
         System.out.println("Logged in to " + this.name);
-        ArrayList<String> tickers = new ArrayList(); //get this from DB with name
-        pf = new Portfolio(tickers);
+        HashMap<String, Double> holdings = new HashMap<String,Double>(); //get this from DB with name
+        ArrayList<String> tickers = new ArrayList<>(holdings.keySet());
+        pf = new Portfolio(holdings, basic);
         System.out.println("What to do with your portfolio? (show/add/remove/exit)");
         while(true)
         {
@@ -23,10 +27,11 @@ public class User
             {
                 System.out.print("Give coin/token name (e.g. litecoin): ");
                 String tick = reader.nextLine();
+                System.out.print("Add how many (use 0 if you'd like to just track the asset)? ");
+                double amount = reader.nextDouble();
                 if(pf.tickerIsValid(tick))
                 {
-                    pf.addTicker(tick);
-                    System.out.println(tick + " added!");
+                    pf.addTicker(tick, amount);
                 }
                 else
                 {
@@ -37,10 +42,11 @@ public class User
             {
                 System.out.print("Give coin/token name (e.g. litecoin): ");
                 String tick = reader.nextLine();
+                System.out.print("Remove how many (-1 to remove token completely from portfolio)? ");
+                double amount = reader.nextDouble();
                 if(pf.tickerIsValid(tick))
                 {
-                    pf.removeTicker(tick);
-                    System.out.println(tick + " removed!");
+                    pf.removeTicker(tick, amount);
                 }
                 else
                 {
