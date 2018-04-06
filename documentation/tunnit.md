@@ -13,3 +13,7 @@
 
 * 14.00 - 15.30 Koodin kirjottelua, toimivuuden parantelua
 * 17.30 - 20.45 Koodin kirjottelua, toimivuuden parantelua
+
+06.04.
+
+* 14.00 - 17.30 Portfolio.java:an lisättyjä toimintoja
