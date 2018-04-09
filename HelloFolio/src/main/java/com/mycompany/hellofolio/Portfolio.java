@@ -33,14 +33,14 @@ public class Portfolio
         }
     }
 
-    public void showPortfolio()
+    public String showPortfolio()
     {
         double totalWorthUSD = 0;
         double totalWorthBTC = 0;
         tickers = new ArrayList<>(holdings.keySet());
         //System.out.println("holdingskeyset: " + holdings.keySet()); //DEBUG
         BTCPrice = cml.findMarket("bitcoin").getPriceUSD();
-        String printable;
+        String printable = "";
         if(!tickers.isEmpty())
         {
             for(String i : tickers)
@@ -48,18 +48,18 @@ public class Portfolio
                 cm = CoinMarketCap.ticker(i).get();
                 double netWorthBTC =  holdings.get(cm.getId()) * cm.getPriceBTC();
                 double netWorthUSD = netWorthBTC * BTCPrice;
-                printable = cm.getName() + " " + cm.getSymbol() + " (Market cap: " + cm.getMarketCapUSD() + " USD) ### Last price: $" + cm.getPriceUSD() + ", " + cm.getPriceBTC() + " BTC. ### Your holdings: " + holdings.get(cm.getId()) + " " + cm.getSymbol() + " ### Net worth: $" + netWorthUSD + ", " + netWorthBTC + " BTC";
+                printable += cm.getName() + " " + cm.getSymbol() + " (Market cap: " + cm.getMarketCapUSD() + " USD) ### Last price: $" + cm.getPriceUSD() + ", " + cm.getPriceBTC() + " BTC. ### Your holdings: " + holdings.get(cm.getId()) + " " + cm.getSymbol() + " ### Net worth: $" + netWorthUSD + ", " + netWorthBTC + " BTC\n";
                 totalWorthUSD += netWorthUSD;
                 totalWorthBTC += netWorthBTC;
-                System.out.println(printable);
             }
+            printable += "Total value of holdings: $" + totalWorthUSD + ", " + totalWorthBTC +  " BTC.";
+            return printable;
         }
         else
         {
-            System.out.println("Your portfolio is empty!");
+            return "Your portfolio is empty!";
         }
 
-        System.out.println("Total value of holdings: $" + totalWorthUSD + ", " + totalWorthBTC +  " BTC.");
     }
 
     public void addTicker(String tick, double amt) //adding negative values is allowed, basically the same thing as removing.

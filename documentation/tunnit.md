@@ -17,3 +17,7 @@
 06.04.
 
 * 14.00 - 17.30 Portfolio.java:an lisättyjä toimintoja
+
+09.04.
+
+* 18.00 - 19.00 Yhden pakollisen testin kirjoittelu, testien teon nopea uudelleenopettelu ja debugaus

@@ -22,7 +22,7 @@ public class User
         {
             String cmd = reader.nextLine();
             if(cmd.equals("show"))
-                pf.showPortfolio();
+                System.out.println(pf.showPortfolio());
             else if(cmd.equals("add"))
             {
                 System.out.print("Give coin/token name (e.g. litecoin): ");
