@@ -9,7 +9,7 @@ HelloFolio on kryptovaluuttojen hintojen seurantaa varten tehty ohjelma. K√§ytt√
 
 ## Komentorivitoiminnot
 
-###Testaus
+### Testaus
 
 Testit suoritetaan komennolla
 
@@ -25,7 +25,7 @@ mvn jacoco:report
 
 Josta kattavuusraporttia voidaan tarkastella avaamalla selaimella tiedosto _./target/site/jacoco/index.html_ 
 
-###Suoritettavan jarin generointi
+### Suoritettavan jarin generointi
 
 Komento
 
@@ -35,7 +35,7 @@ mvn package
 
 generoi hakemistoon _target_ suoritettavan jar-tiedoston HelloFolio-1.0-SNAPSHOT.jar
 
-###Koodin ajaminen
+### Koodin ajaminen
 
 Komento
 
