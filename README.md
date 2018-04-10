@@ -1,15 +1,46 @@
-# OTM_harjoitustyö
-## Tehtävät
-### Viikko 1
-[komentorivi.txt](https://github.com/figgislol/otm-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+# OTM-harjoitustyö: HelloFolio
 
-[gitlog.txt](https://github.com/figgislol/otm-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-~~testi~~
-
-epäsynkroonitesti
+HelloFolio on kryptovaluuttojen hintojen seurantaa varten tehty ohjelma. Käyttäjä voi luoda oman portfolionsa ja tarkkailla omien valuuttojensa hintoja, sekä koko portfolion kokonaishintaa.
 
 ## Dokumentointi
 [Vaatimusmäärittely](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/tunnit.md)
+
+## Komentorivitoiminnot
+
+###Testaus
+
+Testit suoritetaan komennolla
+
+```
+mvn test
+```
+
+Testikattavuusraportti luodaan komennolla
+
+```
+mvn jacoco:report
+```
+
+Josta kattavuusraporttia voidaan tarkastella avaamalla selaimella tiedosto _./target/site/jacoco/index.html_ 
+
+###Suoritettavan jarin generointi
+
+Komento
+
+```
+mvn package
+```
+
+generoi hakemistoon _target_ suoritettavan jar-tiedoston HelloFolio-1.0-SNAPSHOT.jar
+
+###Koodin ajaminen
+
+Komento
+
+```
+mvn -e compile exec:java -Dexec.mainClass=com.mycompany.hellofolio.Hellofolio
+```
+
+ajaa HelloFoliota terminaalissa.
