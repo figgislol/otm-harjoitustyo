@@ -1,0 +1,3 @@
+# Arkkitehtuurikuvaus
+
+!(./imgs/arkkitehtuurikaavio.png)
