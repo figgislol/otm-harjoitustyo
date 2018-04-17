@@ -1,3 +1,3 @@
 # Arkkitehtuurikuvaus
 
-!(./imgs/arkkitehtuurikaavio.png)
+! (./imgs/arkkitehtuurikaavio.png)
