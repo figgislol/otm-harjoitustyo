@@ -9,4 +9,6 @@
 | 04.04. | 17.30 - 20.45 (3.25h) | Koodin kirjottelua, toimivuuden parantelua |
 | 06.04. | 14.00 - 17.30 (3.5h) | Portfolio.java:an lisättyjä toimintoja |
 | 09.04. | 18.00 - 19.00 (1h) | Yhden pakollisen testin kirjoittelu, testien teon nopea uudelleenopettelu ja debugaus |
-| Yhteensä | 16.25h | |
+| 16.04. | 16.30 - 20.30 (4h) | Testien lisääminen |
+| 17.04. | 09.30 - 11.00 (1.5h) | Checkstylen käyttöönotto, luokkakaavioiden piirtely |
+| Yhteensä | 21.75h | |
