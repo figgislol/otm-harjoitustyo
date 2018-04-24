@@ -9,6 +9,9 @@ HelloFolio on kryptovaluuttojen hintojen seurantaa varten tehty ohjelma. K√§ytt√
 
 [Arkkitehtuurikuvaus](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/arkkitehtuuri.md)
 
+## Releaset
+[Viikko 5](https://github.com/figgislol/otm-harjoitustyo/releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 
 ### Testaus
@@ -42,7 +45,7 @@ generoi hakemistoon _target_ suoritettavan jar-tiedoston HelloFolio-1.0-SNAPSHOT
 Komento
 
 ```
-mvn -e compile exec:java -Dexec.mainClass=com.mycompany.hellofolio.Hellofolio
+mvn -e compile exec:java -Dexec.mainClass=hellofolio.Hellofolio
 ```
 
 ajaa HelloFoliota terminaalissa.

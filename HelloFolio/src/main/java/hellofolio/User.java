@@ -1,11 +1,13 @@
 package hellofolio;
 import java.util.*;
+import java.io.*;
 
 public class User {
     String name;
     Portfolio pf;
     Scanner reader;
     boolean basic = false;
+    File holdingsFile; //TODO start working on databases
     public User(String name) {
         reader = new Scanner(System.in);
         this.name = name;

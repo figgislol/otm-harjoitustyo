@@ -29,16 +29,34 @@ public class OSHelloFolio {
         }
     }
 
-    //TODO handle wrong logins
     public boolean promptLogin() { //getWantToLogin() -> promptLogin() in OS, return true on good login
         boolean correctPassword = false;
         reader = new Scanner(System.in);
-        System.out.print("Username: ");
-        username = reader.nextLine();
-        System.out.print("Password: ");
-        String password = reader.nextLine();
-        if (users.get(username).equals(password)) {
-            correctPassword = true;
+        while (true) {
+            System.out.print("Username: ");
+            username = reader.nextLine();
+            System.out.print("Password: ");
+            String password = reader.nextLine();
+            String cmd;
+            if (!users.containsKey(username)) {
+                while (true) {
+                    System.out.println("Username does not exist! Try again (y/n)?.");
+                    cmd = reader.nextLine();
+                    if (cmd.equals("y") || cmd.equals("n")) {
+                        break;
+                    } else {
+                        System.out.println("Invalid command!");
+                    }
+                }
+                if (cmd.equals("y")) {
+                    continue;
+                } else {
+                    break;
+                }
+            }
+            if (users.get(username).equals(password)) {
+                return true;
+            }
         }
         return correctPassword;
     }
