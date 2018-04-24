@@ -11,4 +11,7 @@
 | 09.04. | 18.00 - 19.00 (1h) | Yhden pakollisen testin kirjoittelu, testien teon nopea uudelleenopettelu ja debugaus |
 | 16.04. | 16.30 - 20.30 (4h) | Testien lisääminen |
 | 17.04. | 09.30 - 11.00 (1.5h) | Checkstylen käyttöönotto, luokkakaavioiden piirtely |
-| Yhteensä | 21.75h | |
+| 24.04. | 11.30 - 14.30 (3h) | Jar:in tekemisen tekemistä, debuggausta, toimimaan saannin yrittämistä |
+| 24.04. | 16.30 - 18.30 (2h) | Tehtäväksi annettujen asioiden suorittamista (issuet, release, ohjelman kasvattelua) |
+| 24.04. | 20.30 - 22.30 (2h) | Sekvenssikaavion tekemistä, testien pohtimista, muuta pohtimista |
+| Yhteensä | 28.75h | |
