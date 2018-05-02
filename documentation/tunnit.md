@@ -14,4 +14,6 @@
 | 24.04. | 11.30 - 14.30 (3h) | Jar:in tekemisen tekemistä, debuggausta, toimimaan saannin yrittämistä |
 | 24.04. | 16.30 - 18.30 (2h) | Tehtäväksi annettujen asioiden suorittamista (issuet, release, ohjelman kasvattelua) |
 | 24.04. | 20.30 - 22.30 (2h) | Sekvenssikaavion tekemistä, testien pohtimista, muuta pohtimista |
-| Yhteensä | 28.75h | |
+| 02.05. | 14.30 - 16.30 (2h) | Javadoc käyttöönottoa ja pohtimista |
+| 02.05. | 18.00 - 22.30 (4.5h) | Muutoksia koodiin, dokumentoinnin päivittämistä, tulevaa koodinkirjoittelun suunnittelua |
+| Yhteensä | 35.25h | |

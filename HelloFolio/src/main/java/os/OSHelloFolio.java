@@ -29,6 +29,12 @@ public class OSHelloFolio {
         }
     }
 
+    /**
+     * Metodi aloittaa loginin.
+     *
+     * @return Palauttaa true, jos login onnistui, false jos ei onnistunut.
+     */
+
     public boolean promptLogin() { //getWantToLogin() -> promptLogin() in OS, return true on good login
         boolean correctPassword = false;
         reader = new Scanner(System.in);
@@ -61,6 +67,12 @@ public class OSHelloFolio {
         return correctPassword;
     }
 
+    /**
+     * Metodi aloittaa uuden käyttäjän luonnin.
+     *
+     * @return Palauttaa true, jos käyttäjän luominen onnistui, false jos ei onnistunut.
+     */
+
     public boolean createUser() { //return true upon creation success
         reader = new Scanner(System.in);
         while (true) {
@@ -80,6 +92,10 @@ public class OSHelloFolio {
         users.put(username, password);
         return true;
     }
+
+    /**
+     * Metodi aloittaa basic käyttäjän käyttämisen.
+     */
 
     public void useBasicUser() {
         username = "basic";

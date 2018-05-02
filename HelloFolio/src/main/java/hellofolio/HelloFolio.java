@@ -12,6 +12,12 @@ public class HelloFolio {
         }
     }
     
+    /**
+     * Metodi tarkistaa nettiyhteyden toimivuuden.
+     *
+     * @return Palauttaa true, jos yhteys on saatu, false jos ei.
+     */
+
     public static boolean netIsAvailable() throws IOException {
         try {
             final URL url = new URL("https://api.coinmarketcap.com/");

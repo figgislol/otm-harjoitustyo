@@ -3,6 +3,8 @@
 HelloFolio on kryptovaluuttojen hintojen seurantaa varten tehty ohjelma. Käyttäjä voi luoda oman portfolionsa ja tarkkailla omien valuuttojensa hintoja, sekä koko portfolion kokonaishintaa.
 
 ## Dokumentointi
+[Käyttöohje](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/kayttoohje.md)
+
 [Vaatimusmäärittely](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/tunnit.md)
@@ -11,6 +13,8 @@ HelloFolio on kryptovaluuttojen hintojen seurantaa varten tehty ohjelma. Käytt�
 
 ## Releaset
 [Viikko 5](https://github.com/figgislol/otm-harjoitustyo/releases/tag/viikko5)
+
+[Viikko 6](https://github.com/figgislol/otm-harjoitustyo/releases/tag/v1.0.1)
 
 ## Komentorivitoiminnot
 

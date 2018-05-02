@@ -7,6 +7,22 @@ public class UIHelloFolio {
     boolean wantToLogin = false;
     boolean newUser = false;
     public UIHelloFolio() {
+        conversate();
+    }
+
+    public boolean getNewUser() {
+        return newUser;
+    }
+
+    public boolean getWantToLogin() {
+        return wantToLogin;
+    }
+
+    /**
+     * Metodi aloittaa käyttäjälle puhumisen.
+     */
+
+    public void conversate() {
         reader = new Scanner(System.in);
         System.out.println("Welcome to HelloFolio! Do you wish to login (y/n) or create a new user (new)?");
         String wantToLoginStr;
@@ -26,13 +42,5 @@ public class UIHelloFolio {
                 System.out.println("Invalid input, try again. (new/y/n/exit)");
             }
         }
-    }
-
-    public boolean getNewUser() {
-        return newUser;
-    }
-
-    public boolean getWantToLogin() {
-        return wantToLogin;
     }
 }

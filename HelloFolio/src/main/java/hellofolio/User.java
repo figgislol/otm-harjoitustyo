@@ -9,15 +9,27 @@ public class User {
     boolean basic = false;
     File holdingsFile; //TODO start working on databases
     public User(String name) {
-        reader = new Scanner(System.in);
         this.name = name;
-        if (this.name.equals("basic")) {
+        if (name.equals("basic")) {
             basic = true;
         }
-        System.out.println("Logged in to " + this.name);
         HashMap<String, Double> holdings = new HashMap<String, Double>(); //get this from DB with name
         ArrayList<String> tickers = new ArrayList<>(holdings.keySet());
         pf = new Portfolio(holdings, basic);
+        conversate();
+    }
+
+    public Portfolio getPortfolio() {
+        return pf;
+    }
+
+    /**
+     * Metodi aloittaa käyttäjän kanssa keskustelun.
+     */
+
+    public void conversate() {
+        reader = new Scanner(System.in);
+        System.out.println("Logged in to " + name);
         System.out.println("What to do with your portfolio? (show/add/remove/exit)");
         while (true) {
             String cmd = reader.nextLine();
@@ -47,9 +59,5 @@ public class User {
                 break;
             }
         }
-    }
-
-    public Portfolio getPortfolio() {
-        return pf;
     }
 }
