@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa tiedosto (HelloFolio.jar)[https://github.com/figgislol/otm-harjoitustyo/releases]
+Lataa tiedosto [HelloFolio.jar](https://github.com/figgislol/otm-harjoitustyo/releases)
 
 ## Ohjelman käynnistäminen
 
