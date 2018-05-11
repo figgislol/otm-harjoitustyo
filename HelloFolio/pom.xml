@@ -83,6 +83,7 @@
                 <configuration>
                     <excludes>
                         <exclude>ui/*</exclude>
+                        <exclude>os/*</exclude>
                         <exclude>hellofolio/HelloFolio*</exclude>
                         <exclude>hellofolio/User*</exclude>
                     </excludes>

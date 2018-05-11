@@ -16,4 +16,6 @@
 | 24.04. | 20.30 - 22.30 (2h) | Sekvenssikaavion tekemistä, testien pohtimista, muuta pohtimista |
 | 02.05. | 14.30 - 16.30 (2h) | Javadoc käyttöönottoa ja pohtimista |
 | 02.05. | 18.00 - 22.30 (4.5h) | Muutoksia koodiin, dokumentoinnin päivittämistä, tulevaa koodinkirjoittelun suunnittelua |
-| Yhteensä | 35.25h | |
+| 09.05. | 16.00 - 20.00 (4h) | Pysyväistallennuksen käyttöönottoa, koodin muutoksia |
+| 11.05. | 16.00 - 23.30 (7.5h) | Pysyväistallennuksen viimeistelyä, ohjelma ainakin omien suunnitelmien mukaan nyt valmis. Dokumentoinnin kirjoittelua |
+| Yhteensä | 46.75h | |

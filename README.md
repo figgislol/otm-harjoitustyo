@@ -5,16 +5,20 @@ HelloFolio on kryptovaluuttojen hintojen seurantaa varten tehty ohjelma. Käytt�
 ## Dokumentointi
 [Käyttöohje](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/kayttoohje.md)
 
-[Vaatimusmäärittely](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
+[Määrittelydokumentti](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/tunnit.md)
 
 [Arkkitehtuurikuvaus](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/arkkitehtuuri.md)
 
+[Testausdokumentti](https://github.com/figgislol/otm-harjoitustyo/blob/master/documentation/testausdokumentti.md)
+
 ## Releaset
 [Viikko 5](https://github.com/figgislol/otm-harjoitustyo/releases/tag/viikko5)
 
 [Viikko 6](https://github.com/figgislol/otm-harjoitustyo/releases/tag/v1.0.1)
+
+[Loppupalautus](https://github.com/figgislol/otm-harjoitustyo/releases/tag/v1.1.0)
 
 ## Komentorivitoiminnot
 
@@ -29,7 +33,7 @@ mvn test
 Testikattavuusraportti luodaan komennolla
 
 ```
-mvn jacoco:report
+mvn test jacoco:report
 ```
 
 Josta kattavuusraporttia voidaan tarkastella avaamalla selaimella tiedosto _./target/site/jacoco/index.html_ 
@@ -53,3 +57,22 @@ mvn -e compile exec:java -Dexec.mainClass=hellofolio.Hellofolio
 ```
 
 ajaa HelloFoliota terminaalissa.
+
+
+### JavaDoc
+
+JavaDoc generoidaan komennolla
+
+```
+mvn javadoc:javadoc
+```
+
+JavaDocia voi tarkastella avaamalla selaimella tiedosto *target/site/apidocs/index.html*
+
+### Checkstyle
+
+Avaamalla selaimella tiedosto *target/site/checkstyle.html* nähdään seuraavan komennon ajamisen jälkeen mahdolliset virheilmoitukset
+
+```
+mvn jxr:jxr checkstyle:checkstyle
+```

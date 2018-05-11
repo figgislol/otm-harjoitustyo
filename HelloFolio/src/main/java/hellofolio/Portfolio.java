@@ -12,6 +12,7 @@ public class Portfolio {
     double currentBTCPrice;
 
     public Portfolio(HashMap<String, Double> h, boolean basic) {
+        System.out.println("This may take a while.. Please wait :)");
         coinMarketList = CoinMarketCap.ticker().setLimit(10).get(); //basic view = top 10 coins
         if (basic) {
             holdings = new HashMap<String, Double>();
@@ -35,18 +36,18 @@ public class Portfolio {
         double totalWorthBTC = 0;
         tickers = new ArrayList<>(holdings.keySet());
         currentBTCPrice = coinMarketList.findMarket("bitcoin").getPriceUSD();
-        String printable = "";
+        String returnable = "";
         if (!tickers.isEmpty()) {
             for (String i : tickers) {
                 coinMarkets = CoinMarketCap.ticker(i).get();
                 double netWorthBTC =  holdings.get(coinMarkets.getId()) * coinMarkets.getPriceBTC();
                 double netWorthUSD = netWorthBTC * currentBTCPrice;
-                printable += coinMarkets.getName() + " " + coinMarkets.getSymbol() + " (Market cap: " + coinMarkets.getMarketCapUSD() + " USD) ### Last price: $" + coinMarkets.getPriceUSD() + ", " + coinMarkets.getPriceBTC() + " BTC. ### Your holdings: " + holdings.get(coinMarkets.getId()) + " " + coinMarkets.getSymbol() + " ### Net worth: $" + netWorthUSD + ", " + netWorthBTC + " BTC\n";
+                returnable += coinMarkets.getName() + " " + coinMarkets.getSymbol() + " (Market cap: " + coinMarkets.getMarketCapUSD() + " USD) ### Last price: $" + coinMarkets.getPriceUSD() + ", " + coinMarkets.getPriceBTC() + " BTC. ### Your holdings: " + holdings.get(coinMarkets.getId()) + " " + coinMarkets.getSymbol() + " ### Net worth: $" + netWorthUSD + ", " + netWorthBTC + " BTC\n";
                 totalWorthUSD += netWorthUSD;
                 totalWorthBTC += netWorthBTC;
             }
-            printable += "Total value of holdings: $" + totalWorthUSD + ", " + totalWorthBTC +  " BTC.";
-            return printable;
+            returnable += "Total value of holdings: $" + totalWorthUSD + ", " + totalWorthBTC +  " BTC.";
+            return returnable;
         } else {
             return "Your portfolio is empty!";
         }
@@ -56,22 +57,22 @@ public class Portfolio {
      * Metodi lisää haluttavan "tickerin" eli valuutan nimen  portfolioon, jos annettu ticker on validi.
      *
      * @param tick Käyttäjän antama syöte, jonka on tarkoitus olla valuutan nimi pieninä kirjaimina, esim. litecoin
-     * @param amt Määrä, eli kuinka monta kappaletta valuuttaa käyttäjä omistaa.
+     * @param amount Määrä, eli kuinka monta kappaletta valuuttaa käyttäjä omistaa.
      *
      * @return Palauttaa käyttöjärjestelmälle Stringin onnistumisestaan.
      */
 
-    public String addTicker(String tick, double amt) { //adding negative values is allowed, basically the same thing as removing.
+    public String addTicker(String tick, double amount) { //adding negative values is allowed, basically the same thing as removing.
         String returnable = "";
         if (holdings.containsKey(tick)) {
             double currentAmount = holdings.get(tick);
-            currentAmount += amt;
+            currentAmount += amount;
             holdings.put(tick, currentAmount);
         } else {
-            holdings.put(tick, amt);
+            holdings.put(tick, amount);
         }
-        if (amt != 0) {
-            returnable = amt + " " + tick + " added!";
+        if (amount != 0) {
+            returnable = amount + " " + tick + " added!";
         } else {
             returnable = tick + " added!";
         }
@@ -82,24 +83,23 @@ public class Portfolio {
      * Metodi poistaa haluttavan "tickerin" eli valuutan nimen tai valuutan määrää portfoliosta.
      *
      * @param tick Käyttäjän antama syöte, jonka on tarkoitus olla valuutan nimi pieninä kirjaimina, esim. litecoin
-     * @param amt Määrä, eli kuinka monta kappaletta valuuttaa käyttäjä haluaa poistaa. Jos halutaan poistaa kokonaan, niin tämän täytyy olla -1.
+     * @param amount Määrä, eli kuinka monta kappaletta valuuttaa käyttäjä haluaa poistaa. Jos halutaan poistaa kokonaan, niin tämän täytyy olla -1.
      *
      * @return Palauttaa käyttöjärjestelmälle Stringin onnistumisestaan.
      */
 
-    //TODO "all" should remove everything and make amt = 0
-    public String removeTicker(String tick, double amt) { //not sure if should disallow removing negative values (could cause confusion)
+    public String removeTicker(String tick, double amount) { //not sure if should disallow removing negative values (could cause confusion)
         String returnable = "";
         if (holdings.containsKey(tick)) {
-            if (amt == -1) {
+            if (amount == -1) {
                 holdings.remove(tick);
                 returnable = tick + " removed completely";
                 return returnable;
             }
             double currentAmount = holdings.get(tick);
-            currentAmount -= amt;
+            currentAmount -= amount;
             holdings.put(tick, currentAmount);
-            returnable = amt + " " + tick + " removed!";
+            returnable = amount + " " + tick + " removed!";
         } else {
             returnable = "Can't remove, since " + tick + " was not found in your portfolio.";
         }
@@ -122,5 +122,9 @@ public class Portfolio {
             return false;
         }
         return true;
+    }
+
+    public HashMap<String, Double> getHoldings() {
+        return holdings;
     }
 }

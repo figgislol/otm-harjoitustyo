@@ -1,31 +1,49 @@
 package os;
 import hellofolio.User;
 import java.util.*;
+import java.io.*;
 import ui.UIHelloFolio;
 
 public class OSHelloFolio {
     Scanner reader;
     UIHelloFolio uhf;
     HashMap<String, String> users;
+    String file = "./users.txt";
     String username;
     User user;
     boolean loggedIn = false;
 
-    public OSHelloFolio() {
-        reader = new Scanner(System.in);
+    public OSHelloFolio() throws IOException, Exception {
         users = new HashMap<String, String>(); //get this from DB later
-        users.put("basic", "basic");
-        users.put("perkele", "123");
-        uhf = new UIHelloFolio();
-        if (uhf.getNewUser()) {
-            loggedIn = createUser();
-        } else if (uhf.getWantToLogin()) {
-            loggedIn = promptLogin();
-        } else {
-            useBasicUser();
+        initializeUsers();
+        reader = new Scanner(System.in);
+        while (!loggedIn) {
+            uhf = new UIHelloFolio();
+            if (uhf.getNewUser()) {
+                loggedIn = createUser();
+            } else if (uhf.getWantToLogin()) {
+                loggedIn = promptLogin();
+            } else {
+                useBasicUser();
+            }
         }
-        if (loggedIn) {
-            user = new User(username);
+        user = new User(username);
+    }
+
+    /**
+     * Metodi lukee tiedostosta users.txt käyttäjät ja asettaa ne users-nimiseen HashMap:iin.
+     */
+
+    public void initializeUsers() throws IOException, Exception {
+        try {
+            Scanner fileRead = new Scanner(new File(file));
+            while (fileRead.hasNextLine()) {
+                String[] parts = fileRead.nextLine().split(";");
+                users.put(parts[0], parts[1]);
+            }
+        } catch (Exception e) {
+            FileWriter writer = new FileWriter(new File(file));
+            writer.close();
         }
     }
 
@@ -73,13 +91,13 @@ public class OSHelloFolio {
      * @return Palauttaa true, jos käyttäjän luominen onnistui, false jos ei onnistunut.
      */
 
-    public boolean createUser() { //return true upon creation success
+    public boolean createUser() throws Exception { 
         reader = new Scanner(System.in);
         while (true) {
             System.out.print("Username (exit to exit): ");
             username = reader.nextLine();
             if (username.equals("exit")) {
-                System.exit(0); //easy way out now, need to implement a way to go back to previous "screen"
+                return false;
             }
             if (users.containsKey(username)) {
                 System.out.println("Username already exists!");
@@ -89,6 +107,12 @@ public class OSHelloFolio {
         }
         System.out.print("Password: ");
         String password = reader.nextLine();
+        try (FileWriter writer = new FileWriter(new File(file), true)) {
+            writer.write(username + ";" + password + "\n");
+        } catch (Exception e) {
+            FileWriter writer = new FileWriter(new File(file));
+            writer.close();
+        }
         users.put(username, password);
         return true;
     }
@@ -102,5 +126,3 @@ public class OSHelloFolio {
         loggedIn = true;
     }
 }
-
-

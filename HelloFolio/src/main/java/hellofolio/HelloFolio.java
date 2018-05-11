@@ -4,7 +4,7 @@ import os.OSHelloFolio;
 import java.net.*;
 
 public class HelloFolio {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, Exception {
         if (netIsAvailable()) {
             OSHelloFolio ohf = new OSHelloFolio();
         } else {
